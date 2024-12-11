@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <title>Only You ❤️</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Thêm favicon -->
+  <link rel="icon" type="image/png" href="./img/icon1.png">
+
+  <style>
+    /* Thêm CSS vào đây */
+    h1 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 3em; /* Kích thước mặc định */
+      font-style: italic; /* Chữ nghiêng */
+      background: linear-gradient(120deg, red, orange, yellow, green, blue, indigo, violet); /* Màu sắc gradient */
+      -webkit-background-clip: text; /* Áp dụng màu cho chữ */
+      color: transparent; /* Làm chữ trong suốt để màu hiển thị */
+      background-size: 400% auto; /* Điều chỉnh độ rộng gradient */
+      animation: slide 5s linear infinite; /* Tạo chuyển động màu từ trái sang phải với tốc độ nhanh */
+      padding: 0 10px; /* Thêm khoảng đệm để không bị cắt chữ */
+    }
+
+    @keyframes slide {
+      0% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Bảo có điều muốn nói</h1>
+  <button id="playButton" onclick="generateRandomNotifications()">Nhấn vào đây nè</button>
+  <div class="final-message" id="finalMessage" onclick="redirectToNewPage()">
+    <p id="text1"></p>
+    <p id="text2"></p>
+  </div>
+  <audio id="audioPlayer" src="./audio/TBN.mp3"></audio> 
+  <script>
+    const playButton = document.getElementById("playButton");
+    const audioPlayer = document.getElementById("audioPlayer");
+
+    playButton.addEventListener("click", function() {
+        audioPlayer.play();
+    });
+  </script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
