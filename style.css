@@ -148,3 +148,6 @@ button:hover {
 	font-size: 35pt;
 }
 
+* {
+  user-select: none;
+}
